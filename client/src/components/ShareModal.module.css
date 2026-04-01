@@ -1,0 +1,159 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.modal {
+  background: var(--surface);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.header h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 380px;
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.closeBtn:hover { background: var(--bg); }
+
+.body { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+
+.section h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.accessList { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.accessItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.accessInfo { flex: 1; min-width: 0; }
+.accessName { display: block; font-size: 0.9rem; font-weight: 500; color: var(--text); }
+.accessEmail { display: block; font-size: 0.78rem; color: var(--text-muted); }
+
+.roleBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.edit { background: #f0fff4; color: var(--success); }
+.view { background: #eff6ff; color: #2563eb; }
+
+.revokeBtn {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  background: transparent;
+  color: #cbd5e0;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+.revokeBtn:hover { background: #fee2e2; color: var(--danger); }
+
+.addRow { display: flex; gap: 0.5rem; align-items: center; }
+
+.select {
+  flex: 1;
+  padding: 0.55rem 0.75rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  color: var(--text);
+  background: var(--surface);
+  min-width: 0;
+}
+.select:focus { border-color: var(--primary); outline: none; }
+
+.permSelect {
+  padding: 0.55rem 0.5rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--surface);
+  flex-shrink: 0;
+}
+.permSelect:focus { border-color: var(--primary); outline: none; }
+
+.shareBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.shareBtn:hover:not(:disabled) { background: var(--primary-hover); }
+.shareBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.noUsers { font-size: 0.85rem; color: var(--text-muted); text-align: center; padding: 0.5rem 0; }

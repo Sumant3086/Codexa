@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ajaia-docs
+    runtime: node
+    region: oregon
+    plan: free
+    rootDir: .
+    buildCommand: npm install && cd server && npm install && cd ../client && npm install && npm run build
+    startCommand: NODE_ENV=production node server/src/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DB_PATH
+        value: /opt/render/project/data/ajaia.db
+      - key: CLIENT_URL
+        value: https://ajaia-docs.onrender.com
