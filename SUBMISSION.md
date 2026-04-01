@@ -21,7 +21,7 @@
 
 ## Live Deployment
 
-**URL:** https://ajaia-docs.onrender.com
+**URL:** https://codexa-1v3q.onrender.com
 
 **Demo credentials** (all use password `password123`):
 
